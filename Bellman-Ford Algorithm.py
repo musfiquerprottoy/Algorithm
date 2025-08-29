@@ -10,7 +10,7 @@ def bellmanFord(V, edges, src):
                 dist[v] = dist[u] + w
 
     for u, v, w in edges:
-        if dist[u] != sys.maxsize and dist[u] + w <dist[v]
+        if dist[u] != sys.maxsize and dist[u] + w <dist[v]:
             print("Graph contains a negative weight cycle.")
             return None
     return dist
@@ -29,3 +29,18 @@ if __name__== "__main__":
         print("\nShortest distances from source:", src, ":")
         for i, d in enumerate(distances):
             print(f"{src} --> {i} = {d if d!=sys.maxsize else 'INF'}")
+
+'''
+Test Case:
+Enter number of vertices and edges: 5 8
+Enter edges in format: u v w
+0 1 -1
+0 2 4
+1 2 3
+1 3 2
+1 4 2
+3 2 5
+3 1 1
+4 3 -3
+Enter source vertex: 0
+'''
