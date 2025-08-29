@@ -39,3 +39,17 @@ if __name__ == "__main__":
     print("\nShortest distances from source", src, ":")
     for i, d in enumerate(distances):
         print(f"{src} → {i} = {d if d != sys.maxsize else 'INF'}")
+
+'''
+Test case:
+Enter number of vertices and edges: 5 7
+Enter edges in format: u v w
+0 1 10
+0 4 5
+1 2 1
+4 1 3
+4 2 9
+2 3 4
+3 0 7
+Enter source vertex: 0
+'''
